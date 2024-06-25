@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Nerchuko</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <style>
+        
+body{
+	font:15px/1.5 Arial, Helvetica,sans-serif;
+	padding: 0px;
+	background-color:#f4f5e7;
+}
+
+.container{
+	width:100%;
+	margin: auto;
+	overflow: hidden;
+}
+
+header{
+	background:#03A9F4;
+	border-bottom:#448AFF 3 px solid;
+	height: 120 px;
+	width:100%;
+	padding-top:30px;
+
+}
+
+.main-header{
+			text-align:center;
+			background-color: blue;
+			height:100px;
+			width:100%;
+			margin:0px;
+		}
+        
+#brandname{
+	float:left;
+	font-size:30px;
+	color: #fff;
+	margin: 10px;
+}
+a{
+    color:red;
+}
+.night{
+         background:black;
+         color:white;
+             }
+
+.resultss{
+	border-radius: 15px 50px;
+    background: #345fe4;
+    padding: 20px; 
+    width: 200px;
+    height: 150px;
+}
+.footer{ 
+       position: fixed;  
+       clear:both;
+    background-color: #C1E3E1;   
+       text-align: center;    
+       font-size:x-large;
+       color: red;
+       bottom: 30px; 
+       width: 100%;
+   } 
+
+    </style>
+
+</head>
+<body>
+
+	<header>
+		<div class="container">
+		<div id="brandname">
+            <a href="/">SMS Spam detector</div></a>
+		</div>
+		
+	</div>
+    </header>
+    <div class="container">
+
+    <div class="row ">
+        <div class="col-md-12">
+            <button class="btn btn-danger js-go-day">DAY MODE</button>
+            <button class="btn btn-danger js-go-night">NIGHT MODE</button>
+            <br>
+        </div>
+    </div>
+
+	
+
+		<form action="/predict" method="POST">
+        
+        <div class="form-group">
+            <label for="comment">Enter Your Message Here:</label>
+            <textarea class="form-control" rows="5" id="comment" name="text" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Submit</button>
+		
+    </form>
+    
+
+    
+    <div class="footer">Like, share, and subscribe to the channel <a href = "https://youtu.be/v31KafvAJ-U">NERCHUKO.</a></div>
+		
+	</div>
+
+    <script>
+
+        $('.js-go-night').click(function(){
+            $('body').addClass('night');
+            $('div').addClass('night');
+            $('li').addClass('night');
+            $('code').addClass('night');
+        });
+        $('.js-go-day').click(function(){
+            $('body').removeClass('night');
+            $('div').removeClass('night');
+            $('li').removeClass('night');
+            $('code').removeClass('night');
+        });
+    </script>
+	
+
+</body>
+</html>
